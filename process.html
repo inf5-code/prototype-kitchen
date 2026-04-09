@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proceso | Diseño S&E</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-secondary": "#ffffff", "secondary": "#75584d",
+          "surface-container": "#eeeeee", "outline-variant": "#d4c3be",
+          "on-primary": "#ffffff", "surface-container-low": "#f3f3f3",
+          "surface-container-lowest": "#ffffff", "on-surface": "#1a1c1c",
+          "surface": "#f9f9f9", "outline": "#827470", "error": "#ba1a1a",
+          "primary": "#23333a", "primary-container": "#394951",
+          "on-surface-variant": "#504441", "surface-container-high": "#e8e8e8",
+          "surface-container-highest": "#e2e2e2", "background": "#f9f9f9",
+        },
+        borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "9999px" },
+        fontFamily: { "headline": ['"Noto Serif"', "serif"], "body": ["Manrope", "sans-serif"], "label": ["Manrope", "sans-serif"] }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  .nav-glass { background: rgba(249,249,249,0.88); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+  .step-line::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, #75584d, transparent);
+  }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+
+<!-- NAVIGATION -->
+<nav class="nav-glass fixed top-0 w-full z-50 shadow-sm">
+  <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 md:py-5 max-w-screen-2xl mx-auto">
+    <a href="index.html" class="font-headline text-lg md:text-2xl font-bold tracking-tighter text-on-surface">DISEÑO S&E</a>
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="font-label text-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="projects.html">Proyectos</a>
+      <a class="font-label text-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="services.html">Servicios</a>
+      <a class="font-label text-sm tracking-wide text-on-surface border-b border-on-surface pb-0.5" href="process.html">Proceso</a>
+      <a class="font-label text-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contacto</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:inline-block bg-primary text-on-primary px-6 py-2 text-xs uppercase tracking-widest hover:opacity-80 transition-all">Reservar Consulta</a>
+      <button onclick="toggleMenu()" class="md:hidden p-2 flex flex-col gap-1.5" aria-label="Menú">
+        <span class="w-5 h-px bg-on-surface block"></span>
+        <span class="w-5 h-px bg-on-surface block"></span>
+        <span class="w-5 h-px bg-on-surface block"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden nav-glass">
+    <div class="flex flex-col px-6 py-4 gap-4 max-w-screen-2xl mx-auto">
+      <a href="projects.html" class="font-label text-xs tracking-widest uppercase text-on-surface-variant py-2">Proyectos</a>
+      <a href="services.html" class="font-label text-xs tracking-widest uppercase text-on-surface-variant py-2">Servicios</a>
+      <a href="process.html" class="font-label text-xs tracking-widest uppercase text-on-surface py-2 font-bold">Proceso</a>
+      <a href="contact.html" class="font-label text-xs tracking-widest uppercase text-on-surface-variant py-2">Contacto</a>
+      <a href="contact.html" class="bg-primary text-on-primary py-3 text-xs uppercase tracking-widest text-center block mt-2">Reservar Consulta</a>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-20 md:pt-24">
+
+<!-- PAGE HEADER -->
+<section class="relative py-20 md:py-36 px-6 md:px-8 bg-primary overflow-hidden">
+  <div class="absolute inset-0 opacity-20">
+    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAa-8EMJF5OB-4McjVXS91cwh-SPfmkhid8StBueo41WUKYmpUfieT7e2M3qMs1VI-zEOFMk3AL4mEgDwieWoJQYOEJR0cGzG-7WvEIH42HZSo77rt4dTLICumQwoX_kEPJhCtlTXPzfD0Q7PJbx2UlRc_YUlhhIPFVbSid8tmbhbl6E28-vveJ-aOReQ0YDTGlscdcOix9URBl8cplArAUYB7RzD0TuZwoCpO_XqyvJbRyr3akpep-PaVsEgpu6DRKL5vSQqblA" alt="Kitchen background"/>
+  </div>
+  <div class="relative z-10 max-w-screen-2xl mx-auto">
+    <span class="text-secondary font-label text-xs uppercase tracking-widest mb-6 block">Transparencia & Rigor</span>
+    <h1 class="font-headline text-5xl md:text-7xl text-on-primary leading-tight max-w-2xl">Nuestro Proceso</h1>
+    <p class="text-on-primary/70 mt-6 max-w-lg leading-relaxed">Cada proyecto sigue un método probado que garantiza fluidez, control de calidad y, sobre todo, una experiencia agradable para el cliente.</p>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="py-20 md:py-32 px-6 md:px-8 bg-surface">
+  <div class="max-w-screen-2xl mx-auto">
+
+    <!-- Step 01 -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mb-20 md:mb-32">
+      <div class="md:col-span-2 flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+        <span class="font-headline text-7xl md:text-9xl text-surface-container-high leading-none select-none">01</span>
+      </div>
+      <div class="md:col-span-5">
+        <span class="text-secondary font-label text-xs uppercase tracking-widest mb-3 block">Primera Reunión</span>
+        <h2 class="font-headline text-3xl md:text-4xl text-primary mb-6">Consulta Inicial</h2>
+        <p class="text-on-surface-variant leading-relaxed mb-6">Todo comienza con una conversación. En nuestra primera reunión —presencial en el estudio o por videollamada— nos sumergimos en su estilo de vida, sus referencias visuales y sus necesidades funcionales.</p>
+        <p class="text-on-surface-variant leading-relaxed">Escuchamos antes de proponer. Este paso define el tono de toda la colaboración.</p>
+      </div>
+      <div class="md:col-span-5">
+        <img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5UEcVgQ1Etl8-iYZdPReC-t_e2yv_b_osGEfalGvheA2x4YO6wPYE9Qe8Op4w41FZQps3jfFAhVbcCxHOpiDJrITqtxStQNmDXnvNsgB6NJe3eULoiBvf_Cm4HGaR-4YBBCP6dZEMZa4ppApfrNAgMa0VGjMKoh6b1T1v1YjQBgHe_-ole6cdwmuQE0Wrk2snSsBXvY-oT8rYJGCPU28zA0LhXaK38wRy8huEzKs2yK4K-17Q24Tm4zkpm4qWHL4_jBcdH89nXA" alt="Reunión de consulta"/>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px bg-surface-container mb-20 md:mb-32"></div>
+
+    <!-- Step 02 -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mb-20 md:mb-32">
+      <div class="md:col-span-2">
+        <span class="font-headline text-7xl md:text-9xl text-surface-container-high leading-none select-none">02</span>
+      </div>
+      <div class="md:col-span-5 md:order-last">
+        <span class="text-secondary font-label text-xs uppercase tracking-widest mb-3 block">Visión + Planos</span>
+        <h2 class="font-headline text-3xl md:text-4xl text-primary mb-6">Concepto y Diseño</h2>
+        <p class="text-on-surface-variant leading-relaxed mb-6">Con los inputs de la consulta inicial, nuestro equipo desarrolla un primer concepto de diseño: distribución espacial, paleta de materiales y referencias visuales agrupadas en un documento editorial.</p>
+        <p class="text-on-surface-variant leading-relaxed">Iteramos conjuntamente hasta alcanzar el plano definitivo que pasará a producción.</p>
+      </div>
+      <div class="md:col-span-5">
+        <img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClpCh6k2yxaWD5TvOfTeZOZRgI1fC4Cf295uTiy19m7UHEVVaDmVat0DaZ9bJOSAD4wuxAB5Mkjo2KTGociOPQzRCqRAd3WTH5Ci9SNsYeBAQ1zLW82tr5AOP8fCwKyK4yF9OYgvyBqQUKAFvBAoxIehFvelO4LBRsJ429f1Li5-3q0c3rSF4cb0cbL4TbnT0EV9FSUOjqOqFbR8kIf8b27c14vmlM5TSYeeOkiE-cn6327MUx2XeXClNzh4Ma3ODsm8hB3WltbQ" alt="Planos de diseño"/>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px bg-surface-container mb-20 md:mb-32"></div>
+
+    <!-- Step 03 -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mb-20 md:mb-32">
+      <div class="md:col-span-2">
+        <span class="font-headline text-7xl md:text-9xl text-surface-container-high leading-none select-none">03</span>
+      </div>
+      <div class="md:col-span-5">
+        <span class="text-secondary font-label text-xs uppercase tracking-widest mb-3 block">Proveedores Premium</span>
+        <h2 class="font-headline text-3xl md:text-4xl text-primary mb-6">Selección de Materiales</h2>
+        <p class="text-on-surface-variant leading-relaxed mb-6">Le acompañamos a nuestros proveedores para que pueda ver, tocar y elegir cada material. Las muestras se presentan en contexto para facilitar decisiones con total seguridad.</p>
+        <p class="text-on-surface-variant leading-relaxed">Trabajamos con mármoles italianos, maderas europeas certificadas y herrajes de latón y acero de alta gama.</p>
+      </div>
+      <div class="md:col-span-5">
+        <img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCafPip7WdWbmCncJCdTruMNuvcq46rReFlbpfc2sTfxo_8WaoaSyRyw5Hmy1uGIkY4K4jDZQItPQJi5NIal0UVD_20GaxiyZjUBbIxEjV1fECZn_0lv50UggCcbqz0mzdGHTjuApTSypZt0nYSKE6XBVA41YdRYe6gezJR4K92I9FX-oQ9N-GXYlZGeXWvBrmwQTmH4p_ZMa0-R4XaJrqHR6OYEZgSO-cyhfBDoUsQu83TOl4Z9nSpEbOv_3BLSo68ywWQBqwCR0Q" alt="Selección de materiales"/>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px bg-surface-container mb-20 md:mb-32"></div>
+
+    <!-- Step 04 -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mb-20 md:mb-32">
+      <div class="md:col-span-2">
+        <span class="font-headline text-7xl md:text-9xl text-surface-container-high leading-none select-none">04</span>
+      </div>
+      <div class="md:col-span-5 md:order-last">
+        <span class="text-secondary font-label text-xs uppercase tracking-widest mb-3 block">Taller Propio</span>
+        <h2 class="font-headline text-3xl md:text-4xl text-primary mb-6">Fabricación Artesanal</h2>
+        <p class="text-on-surface-variant leading-relaxed mb-6">Los módulos, frentes y encimeras se fabrican en nuestro taller bajo supervisión constante. Cada pieza es verificada antes de abandonar la instalación.</p>
+        <p class="text-on-surface-variant leading-relaxed">No externalizamos la fabricación. El control de calidad es nuestro, de principio a fin.</p>
+      </div>
+      <div class="md:col-span-5">
+        <img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEfy4FDZw-_5kgRiTcRqUcewDHK80EMq3iVntpKbiBSKykNXEjcgwu7EPj1utEF1ZMPFDwpx7c4-Qe6gBFyNFwInnkM1VaoToVvS6ib3dVTl12UablS6sdc-_VrvFlgm_mhJ8UwPcnMN0U5z2ly_sIZIDsDswESwsyu5xNpSemCSObHb6271aD6DEdAe0k-1ELYmdPAFCfFbM8N7tI0XFfDG1QzAGvc7M4OxqNJXFfFy-m-SvuVNBBJn0xC3tzoDhEbQCIy5x9Znw" alt="Fabricación artesanal"/>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px bg-surface-container mb-20 md:mb-32"></div>
+
+    <!-- Step 05 -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mb-20 md:mb-32">
+      <div class="md:col-span-2">
+        <span class="font-headline text-7xl md:text-9xl text-surface-container-high leading-none select-none">05</span>
+      </div>
+      <div class="md:col-span-5">
+        <span class="text-secondary font-label text-xs uppercase tracking-widest mb-3 block">Ejecución en Obra</span>
+        <h2 class="font-headline text-3xl md:text-4xl text-primary mb-6">Instalación Profesional</h2>
+        <p class="text-on-surface-variant leading-relaxed mb-6">Nuestros equipos de instalación trabajan con protocolos estrictos para garantizar limpieza, puntualidad y precisión. Coordinamos con fontaneros y electricistas para una instalación integral.</p>
+        <p class="text-on-surface-variant leading-relaxed">Al finalizar, realizamos una visita de entrega con guía de uso y mantenimiento de todos los materiales instalados.</p>
+      </div>
+      <div class="md:col-span-5">
+        <img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2RdotAw_lqw2b0CPuMxdIMKyrOHQcBaHvTKYCGj5JPqKFvZ4vDl505YvNbcLubXrGFyzZ3MaKL9qfAgpoPw0wLPv9n1OPP7VNV7U_wRr3zfyDIBkci4Ux58gPskirFKDYylHeWOEgyGz89-30xJ9-A8Z6-FeGzHfRQvTPIOs_rgXO4P2vS7Fv_juUnBN0sODWISj5GqQydCVTvS_Jh8xNfZ60ieGH72kh_D02UISOWWOI4eVs0kDdSnm8VA_a-pln0CV-u3brzA" alt="Instalación"/>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-px bg-surface-container mb-20 md:mb-32"></div>
+
+    <!-- Step 06 -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+      <div class="md:col-span-2">
+        <span class="font-headline text-7xl md:text-9xl text-surface-container-high leading-none select-none">06</span>
+      </div>
+      <div class="md:col-span-5 md:order-last">
+        <span class="text-secondary font-label text-xs uppercase tracking-widest mb-3 block">Relación Duradera</span>
+        <h2 class="font-headline text-3xl md:text-4xl text-primary mb-6">Seguimiento Post-Obra</h2>
+        <p class="text-on-surface-variant leading-relaxed mb-6">Nuestro compromiso no termina con la entrega. A los 30 y 90 días visitamos el espacio para verificar que todo funciona a la perfección y resolver cualquier pequeño ajuste.</p>
+        <p class="text-on-surface-variant leading-relaxed">Todos los proyectos incluyen garantía de 5 años en estructura y 2 años en acabados.</p>
+      </div>
+      <div class="md:col-span-5">
+        <img class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCojO781mqvW6uXkvhMqTGKgNV-59mKXoBzZ-8Q6cGH-qwxC4QphCC-VRLyavD2miBZTdHEr6D77VLUIt3TraVT-7_r6tRG9A4rlmDzYugn5PrIcUVDTB0Ct4qk4lCBMO_DUmydy3l-Yi4E0o8V-5RFCk_5hsi_CLEox7HFISGRgijltK9QQ-vZ1v1CgAR5IiV-XfPgh38yUB42FGFHVJMpopPyTg_76IdfJrgHkZO2BxgBQ5Y4g7E7Ia__4aAjEPwOvcgs1XDS1Q" alt="Seguimiento post-obra"/>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NUMBERS -->
+<section class="bg-surface-container-low py-20 md:py-28 px-6 md:px-8">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div>
+        <span class="font-headline text-5xl md:text-6xl text-primary block mb-3">+200</span>
+        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Proyectos completados</p>
+      </div>
+      <div>
+        <span class="font-headline text-5xl md:text-6xl text-primary block mb-3">12</span>
+        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Años de experiencia</p>
+      </div>
+      <div>
+        <span class="font-headline text-5xl md:text-6xl text-primary block mb-3">98%</span>
+        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Clientes satisfechos</p>
+      </div>
+      <div>
+        <span class="font-headline text-5xl md:text-6xl text-primary block mb-3">5<span class="text-3xl">años</span></span>
+        <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Garantía estructural</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-primary py-24 px-6 md:px-8">
+  <div class="max-w-screen-2xl mx-auto text-center">
+    <span class="text-secondary font-label text-xs uppercase tracking-[0.3em] mb-4 block">Primer paso</span>
+    <h2 class="font-headline text-4xl md:text-6xl text-on-primary mb-10 leading-tight max-w-2xl mx-auto">Comencemos su proyecto hoy</h2>
+    <a href="contact.html" class="inline-block bg-secondary text-on-secondary px-10 py-4 text-xs uppercase tracking-widest hover:opacity-90 transition-all">Solicitar consulta inicial</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-primary pt-20 pb-10 px-6 md:px-10">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-16 pb-16 border-b border-on-primary/10">
+      <div class="md:col-span-1">
+        <a href="index.html" class="font-headline text-xl font-bold tracking-tighter text-on-primary mb-5 block">DISEÑO S&E<br/>EDITORIAL</a>
+        <p class="text-on-primary/60 font-body text-sm leading-relaxed mb-8">Elevando la cocina al nivel de arte arquitectónico. Diseño, materialidad y artesanía sin concesiones.</p>
+        <div class="flex items-start gap-3 mb-8">
+          <span class="material-symbols-outlined text-secondary text-base mt-0.5">location_on</span>
+          <p class="text-on-primary/60 font-body text-xs leading-relaxed">Calle de la Arquitectura 42<br/>04740 Roquetas de Mar, Almería</p>
+        </div>
+        <div class="flex gap-5">
+          <a href="#" aria-label="Instagram" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" aria-label="Houzz" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21.857V9.143L12 3l9 6.143V21.857H15V15H9v6.857H3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-xs tracking-widest uppercase text-on-primary/40 font-bold mb-2">Navegación</span>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="projects.html">Proyectos</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="services.html">Servicios</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="process.html">Proceso</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="contact.html">Contacto</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-xs tracking-widest uppercase text-on-primary/40 font-bold mb-2">Empresa</span>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Empleo</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Sostenibilidad</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Prensa</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-xs tracking-widest uppercase text-on-primary/40 font-bold mb-2">Legal</span>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Privacidad</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Términos</a>
+        <div class="mt-6 pt-6 border-t border-on-primary/10">
+          <a href="contact.html" class="inline-block bg-secondary text-on-secondary px-6 py-3 text-xs uppercase tracking-widest hover:opacity-90 transition-all">Reservar consulta</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-on-primary/40 font-label text-xs tracking-widest uppercase">© 2025 Diseño S&E. Todos los derechos reservados.</p>
+      <p class="text-on-primary/30 font-label text-xs tracking-wide">Roquetas de Mar, Almería, España</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>

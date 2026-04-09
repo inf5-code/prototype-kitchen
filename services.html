@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Servicios | Diseño S&E</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-secondary": "#ffffff", "secondary": "#75584d",
+          "surface-container": "#eeeeee", "outline-variant": "#d4c3be",
+          "on-primary": "#ffffff", "surface-container-low": "#f3f3f3",
+          "surface-container-lowest": "#ffffff", "on-surface": "#1a1c1c",
+          "surface": "#f9f9f9", "outline": "#827470", "error": "#ba1a1a",
+          "primary": "#23333a", "primary-container": "#394951",
+          "on-surface-variant": "#504441", "surface-container-high": "#e8e8e8",
+          "surface-container-highest": "#e2e2e2", "background": "#f9f9f9",
+        },
+        borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "9999px" },
+        fontFamily: { "headline": ['"Noto Serif"', "serif"], "body": ["Manrope", "sans-serif"], "label": ["Manrope", "sans-serif"] }
+      }
+    }
+  }
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+  .glass-caption { background: rgba(255,255,255,0.82); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+  .nav-glass { background: rgba(249,249,249,0.88); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+
+<!-- NAVIGATION -->
+<nav class="nav-glass fixed top-0 w-full z-50 shadow-sm">
+  <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 md:py-5 max-w-screen-2xl mx-auto">
+    <a href="index.html" class="font-headline text-lg md:text-2xl font-bold tracking-tighter text-on-surface">DISEÑO S&E</a>
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="font-label text-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="projects.html">Proyectos</a>
+      <a class="font-label text-sm tracking-wide text-on-surface border-b border-on-surface pb-0.5" href="services.html">Servicios</a>
+      <a class="font-label text-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="process.html">Proceso</a>
+      <a class="font-label text-sm tracking-wide text-on-surface-variant hover:text-on-surface transition-colors" href="contact.html">Contacto</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:inline-block bg-primary text-on-primary px-6 py-2 text-xs uppercase tracking-widest hover:opacity-80 transition-all">Reservar Consulta</a>
+      <button onclick="toggleMenu()" class="md:hidden p-2 flex flex-col gap-1.5" aria-label="Menú">
+        <span class="w-5 h-px bg-on-surface block"></span>
+        <span class="w-5 h-px bg-on-surface block"></span>
+        <span class="w-5 h-px bg-on-surface block"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden nav-glass">
+    <div class="flex flex-col px-6 py-4 gap-4 max-w-screen-2xl mx-auto">
+      <a href="projects.html" class="font-label text-xs tracking-widest uppercase text-on-surface-variant py-2">Proyectos</a>
+      <a href="services.html" class="font-label text-xs tracking-widest uppercase text-on-surface py-2 font-bold">Servicios</a>
+      <a href="process.html" class="font-label text-xs tracking-widest uppercase text-on-surface-variant py-2">Proceso</a>
+      <a href="contact.html" class="font-label text-xs tracking-widest uppercase text-on-surface-variant py-2">Contacto</a>
+      <a href="contact.html" class="bg-primary text-on-primary py-3 text-xs uppercase tracking-widest text-center block mt-2">Reservar Consulta</a>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-20 md:pt-24">
+
+<!-- PAGE HEADER -->
+<section class="py-20 md:py-28 px-6 md:px-8 bg-surface-container-low">
+  <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
+    <div>
+      <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4 block">Nuestra Oferta</span>
+      <h1 class="font-headline text-5xl md:text-7xl text-on-surface leading-tight">Nuestros<br/>Servicios</h1>
+    </div>
+    <p class="max-w-sm text-on-surface-variant leading-relaxed md:text-right">Cada servicio está diseñado para acompañarle en cada etapa, desde la primera idea hasta el último detalle de la instalación.</p>
+  </div>
+</section>
+
+<!-- SERVICE 1: Diseño Personalizado -->
+<section class="py-20 md:py-28 px-6 md:px-8 bg-surface">
+  <div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+    <div class="order-2 md:order-1">
+      <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4 block">01 — Servicio Principal</span>
+      <h2 class="font-headline text-4xl md:text-5xl text-primary mb-8 leading-tight">Diseño Personalizado</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-6">Cada cocina comienza como una hoja en blanco. Nuestro equipo de diseñadores trabaja directamente con usted para comprender no solo su estética, sino su forma de vivir, cocinar y compartir el espacio.</p>
+      <p class="text-on-surface-variant leading-relaxed mb-10">Entregamos planos técnicos detallados, renders fotorrealistas y moodboards de materiales para que pueda visualizar su futuro espacio antes de que comience la obra.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Planos 2D/3D</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Renders</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Moodboard</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Revisiones Ilimitadas</span>
+      </div>
+      <a href="contact.html" class="inline-block bg-primary text-on-primary px-8 py-3 text-xs uppercase tracking-widest hover:opacity-80 transition-all">Solicitar propuesta</a>
+    </div>
+    <div class="order-1 md:order-2 relative">
+      <img class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5UEcVgQ1Etl8-iYZdPReC-t_e2yv_b_osGEfalGvheA2x4YO6wPYE9Qe8Op4w41FZQps3jfFAhVbcCxHOpiDJrITqtxStQNmDXnvNsgB6NJe3eULoiBvf_Cm4HGaR-4YBBCP6dZEMZa4ppApfrNAgMa0VGjMKoh6b1T1v1YjQBgHe_-ole6cdwmuQE0Wrk2snSsBXvY-oT8rYJGCPU28zA0LhXaK38wRy8huEzKs2yK4K-17Q24Tm4zkpm4qWHL4_jBcdH89nXA" alt="Diseñador revisando muestras"/>
+      <div class="absolute -bottom-6 -left-6 bg-secondary-container w-32 h-32 -z-10"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 2: Montaje Profesional -->
+<section class="py-20 md:py-28 px-6 md:px-8 bg-surface-container-low">
+  <div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+    <div class="relative">
+      <img class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClpCh6k2yxaWD5TvOfTeZOZRgI1fC4Cf295uTiy19m7UHEVVaDmVat0DaZ9bJOSAD4wuxAB5Mkjo2KTGociOPQzRCqRAd3WTH5Ci9SNsYeBAQ1zLW82tr5AOP8fCwKyK4yF9OYgvyBqQUKAFvBAoxIehFvelO4LBRsJ429f1Li5-3q0c3rSF4cb0cbL4TbnT0EV9FSUOjqOqFbR8kIf8b27c14vmlM5TSYeeOkiE-cn6327MUx2XeXClNzh4Ma3ODsm8hB3WltbQ" alt="Instalación profesional"/>
+      <div class="absolute -bottom-6 -right-6 bg-primary w-32 h-32 -z-10"></div>
+    </div>
+    <div>
+      <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4 block">02 — Ejecución</span>
+      <h2 class="font-headline text-4xl md:text-5xl text-primary mb-8 leading-tight">Montaje Profesional</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-6">La instalación es el momento en que el diseño se hace realidad. Nuestros artesanos son seleccionados por su rigor técnico y su respeto por el material. Cada ensamblaje se ejecuta con herramientas de precisión y se verifica al milímetro.</p>
+      <p class="text-on-surface-variant leading-relaxed mb-10">Coordinamos todos los gremios involucrados —fontanería, electricidad, carpintería— para que el proceso sea ágil y sin contratiempos para usted.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Artesanos Certificados</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Gestión de Obra</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Limpieza Final</span>
+      </div>
+      <a href="contact.html" class="inline-block bg-primary text-on-primary px-8 py-3 text-xs uppercase tracking-widest hover:opacity-80 transition-all">Solicitar presupuesto</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE 3: Asesoría en Materiales -->
+<section class="py-20 md:py-28 px-6 md:px-8 bg-surface">
+  <div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+    <div class="order-2 md:order-1">
+      <span class="text-secondary font-label text-xs uppercase tracking-widest mb-4 block">03 — Materialidad</span>
+      <h2 class="font-headline text-4xl md:text-5xl text-primary mb-8 leading-tight">Asesoría en Materiales</h2>
+      <p class="text-on-surface-variant leading-relaxed mb-6">Los materiales son el alma de cada cocina. Tenemos acceso directo a los mejores proveedores europeos de piedra natural, madera maciza, latón y acero inoxidable de grado arquitectónico.</p>
+      <p class="text-on-surface-variant leading-relaxed mb-10">Le guiamos en la selección de cada superficie, acabado y herraje, asegurándonos de que estética y durabilidad se equilibren a la perfección.</p>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Carrara Marble</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Calacatta Gold</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">White Oak</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Brass</span>
+        <span class="inline-flex px-4 py-2 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase">Hormigón Pulido</span>
+      </div>
+      <a href="contact.html" class="inline-block bg-primary text-on-primary px-8 py-3 text-xs uppercase tracking-widest hover:opacity-80 transition-all">Reservar asesoría</a>
+    </div>
+    <div class="order-1 md:order-2 relative">
+      <img class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCafPip7WdWbmCncJCdTruMNuvcq46rReFlbpfc2sTfxo_8WaoaSyRyw5Hmy1uGIkY4K4jDZQItPQJi5NIal0UVD_20GaxiyZjUBbIxEjV1fECZn_0lv50UggCcbqz0mzdGHTjuApTSypZt0nYSKE6XBVA41YdRYe6gezJR4K92I9FX-oQ9N-GXYlZGeXWvBrmwQTmH4p_ZMa0-R4XaJrqHR6OYEZgSO-cyhfBDoUsQu83TOl4Z9nSpEbOv_3BLSo68ywWQBqwCR0Q" alt="Selección de materiales"/>
+      <div class="absolute -top-6 -right-6 bg-secondary w-24 h-24 -z-10"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS TEASER -->
+<section class="bg-primary py-24 px-6 md:px-8">
+  <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+    <div>
+      <span class="text-secondary font-label text-xs uppercase tracking-widest mb-3 block">Transparencia total</span>
+      <h2 class="font-headline text-3xl md:text-5xl text-on-primary leading-tight">Conozca cómo trabajamos paso a paso</h2>
+    </div>
+    <a href="process.html" class="shrink-0 border border-on-primary/40 text-on-primary px-10 py-4 text-xs uppercase tracking-widest hover:bg-on-primary/10 transition-all">Ver el proceso</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-primary pt-20 pb-10 px-6 md:px-10">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-16 pb-16 border-b border-on-primary/10">
+      <div class="md:col-span-1">
+        <a href="index.html" class="font-headline text-xl font-bold tracking-tighter text-on-primary mb-5 block">DISEÑO S&E<br/>EDITORIAL</a>
+        <p class="text-on-primary/60 font-body text-sm leading-relaxed mb-8">Elevando la cocina al nivel de arte arquitectónico. Diseño, materialidad y artesanía sin concesiones.</p>
+        <div class="flex items-start gap-3 mb-8">
+          <span class="material-symbols-outlined text-secondary text-base mt-0.5">location_on</span>
+          <p class="text-on-primary/60 font-body text-xs leading-relaxed">Calle de la Arquitectura 42<br/>04740 Roquetas de Mar, Almería</p>
+        </div>
+        <div class="flex gap-5">
+          <a href="#" aria-label="Instagram" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" aria-label="Houzz" class="text-on-primary/50 hover:text-secondary transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 21.857V9.143L12 3l9 6.143V21.857H15V15H9v6.857H3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-xs tracking-widest uppercase text-on-primary/40 font-bold mb-2">Navegación</span>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="projects.html">Proyectos</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="services.html">Servicios</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="process.html">Proceso</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="contact.html">Contacto</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-xs tracking-widest uppercase text-on-primary/40 font-bold mb-2">Empresa</span>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Empleo</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Sostenibilidad</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Prensa</a>
+      </div>
+      <div class="flex flex-col gap-4">
+        <span class="font-label text-xs tracking-widest uppercase text-on-primary/40 font-bold mb-2">Legal</span>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Privacidad</a>
+        <a class="font-label text-sm text-on-primary/70 hover:text-secondary transition-colors" href="#">Términos</a>
+        <div class="mt-6 pt-6 border-t border-on-primary/10">
+          <a href="contact.html" class="inline-block bg-secondary text-on-secondary px-6 py-3 text-xs uppercase tracking-widest hover:opacity-90 transition-all">Reservar consulta</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-on-primary/40 font-label text-xs tracking-widest uppercase">© 2025 Diseño S&E. Todos los derechos reservados.</p>
+      <p class="text-on-primary/30 font-label text-xs tracking-wide">Roquetas de Mar, Almería, España</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  }
+</script>
+</body>
+</html>
